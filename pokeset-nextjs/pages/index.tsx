@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Head from 'next/head'
 
 export default function Home() {
+  const AIRTABLE_EMBED_URL = "https://airtable.com/embed/appZqZ2f6K4bI65GJ/shrL5GFhFj91koIQB";
+
   const [useAirtable, setUseAirtable] = useState(true)
   const [copied, setCopied] = useState(false)
 
@@ -132,6 +134,12 @@ Want-list (number | name | finish | qty | max_price)
             <p className="text-sm text-slate-600 mt-1">We’ll email you within 24 hours with a sourcing plan. No commitment.</p>
 
             <div className="mt-4 flex items-center gap-3 text-sm">
+            {useAirtable && !AIRTABLE_EMBED_URL && (
+              <div className="mt-4 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">
+                Airtable is embedded below.
+              </div>
+            )}
+
               <input id="toggle" type="checkbox" className="h-4 w-4" checked={useAirtable} onChange={() => setUseAirtable(!useAirtable)} />
               <label htmlFor="toggle">Use Airtable form (auto-database)</label>
             </div>
@@ -139,7 +147,7 @@ Want-list (number | name | finish | qty | max_price)
             {useAirtable ? (
               <div className="mt-4 rounded-xl overflow-hidden border border-slate-200">
                 <iframe
-                  src="https://airtable.com/embed/YOUR_AIRTABLE_FORM_ID?backgroundColor=yellow"
+                  src={AIRTABLE_EMBED_URL}
                   className="w-full h-[900px]"
                   title="PokéSet Airtable Form"
                 ></iframe>
