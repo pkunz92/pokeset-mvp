@@ -28,7 +28,7 @@ Want-list (number | name | finish | qty | max_price)
       <Head>
         <title>PokéSet — Set completion made easy</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Paste your want‑list. We source the best options and send you one simple checkout." />
+        <meta name="description" content="Paste your want-list. We source the best options and send you one simple checkout." />
       </Head>
 
       <header className="sticky top-0 z-10 backdrop-blur bg-white/70 border-b border-slate-200">
@@ -53,7 +53,7 @@ Want-list (number | name | finish | qty | max_price)
                 Complete your Pokémon sets <span className="bg-brand-200 rounded px-2">without the hassle</span>
               </h1>
               <p className="mt-4 text-slate-600 text-lg">
-                Paste your want‑list. We source the best options across trusted marketplaces and send you a single, easy checkout.
+                Paste your want-list. We source the best options across trusted marketplaces and send you a single, easy checkout.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="#form" className="rounded-xl px-5 py-3 border border-ink bg-ink text-white hover:opacity-90 text-sm">Get a free quote</a>
@@ -63,7 +63,7 @@ Want-list (number | name | finish | qty | max_price)
             </div>
             <div className="relative">
               <div className="rounded-2xl border border-slate-200 shadow-sm p-5 bg-white">
-                <div className="text-sm text-slate-500">Example want‑list</div>
+                <div className="text-sm text-slate-500">Example want-list</div>
                 <pre className="mt-2 text-xs md:text-sm bg-slate-50 rounded p-3 overflow-auto border border-slate-200">{example}</pre>
                 <button onClick={copy} className="mt-3 w-full rounded-lg border border-slate-300 px-4 py-2 text-sm hover:border-slate-400">{copied ? 'Copied ✓' : 'Copy example'}</button>
                 <div className="mt-3 text-xs text-slate-500">Or download CSV template below.</div>
@@ -75,9 +75,9 @@ Want-list (number | name | finish | qty | max_price)
         <section className="mx-auto max-w-6xl px-4 pb-4">
           <div className="grid sm:grid-cols-3 gap-3">
             {[
-              {title: 'Manual QA', desc: 'We hand‑check condition & centering.'},
-              {title: 'Best‑price match', desc: 'We search Cardmarket, eBay, TCGPlayer.'},
-              {title: 'Easy checkout', desc: 'One cart, optional booster add‑on.'},
+              {title: 'Manual QA', desc: 'We hand-check condition & centering.'},
+              {title: 'Best-price match', desc: 'We search Cardmarket, eBay, TCGPlayer.'},
+              {title: 'Easy checkout', desc: 'One cart, optional booster add-on.'},
             ].map((f, i) => (
               <div key={i} className="rounded-2xl border border-slate-200 p-4 bg-white">
                 <div className="font-semibold">{f.title}</div>
@@ -91,7 +91,7 @@ Want-list (number | name | finish | qty | max_price)
           <h2 className="text-2xl font-bold">How it works</h2>
           <ol className="mt-4 grid md:grid-cols-3 gap-4 list-decimal list-inside">
             <li className="rounded-2xl border border-slate-200 p-4 bg-white">
-              <div className="font-semibold">Send your want‑list</div>
+              <div className="font-semibold">Send your want-list</div>
               <p className="text-sm text-slate-600 mt-1">Paste text or upload CSV. Tell us budget, language, and condition.</p>
             </li>
             <li className="rounded-2xl border border-slate-200 p-4 bg-white">
@@ -99,8 +99,8 @@ Want-list (number | name | finish | qty | max_price)
               <p className="text-sm text-slate-600 mt-1">We find the best options and check images/condition where available.</p>
             </li>
             <li className="rounded-2xl border border-slate-200 p-4 bg-white">
-              <div className="font-semibold">One‑click checkout</div>
-              <p className="text-sm text-slate-600 mt-1">Approve the quote and pay in one go. Optional booster pack add‑on.</p>
+              <div className="font-semibold">One-click checkout</div>
+              <p className="text-sm text-slate-600 mt-1">Approve the quote and pay in one go. Optional booster pack add-on.</p>
             </li>
           </ol>
         </section>
@@ -115,11 +115,11 @@ Want-list (number | name | finish | qty | max_price)
             </div>
             <div className="rounded-2xl border border-slate-200 p-6 bg-white">
               <div className="font-semibold">Shipping at cost</div>
-              <div className="text-3xl font-extrabold mt-2">Pass‑through</div>
+              <div className="text-3xl font-extrabold mt-2">Pass-through</div>
               <div className="text-sm text-slate-600 mt-1">Tracked options available for CH/EU</div>
             </div>
             <div className="rounded-2xl border border-slate-200 p-6 bg-white">
-              <div className="font-semibold">Optional add‑on</div>
+              <div className="font-semibold">Optional add-on</div>
               <div className="text-3xl font-extrabold mt-2">Booster</div>
               <div className="text-sm text-slate-600 mt-1">Add a fun pack to your order</div>
             </div>
@@ -138,7 +138,6 @@ Want-list (number | name | finish | qty | max_price)
 
             {useAirtable ? (
               <div className="mt-4 rounded-xl overflow-hidden border border-slate-200">
-                {/* Replace the src with your Airtable Form share URL */}
                 <iframe
                   src="https://airtable.com/embed/YOUR_AIRTABLE_FORM_ID?backgroundColor=yellow"
                   className="w-full h-[900px]"
@@ -189,7 +188,7 @@ Want-list (number | name | finish | qty | max_price)
                   </select>
                 </label>
                 <label className="grid gap-1 text-sm">
-                  <span className="font-medium">Paste your want‑list</span>
+                  <span className="font-medium">Paste your want-list</span>
                   <textarea name="wantlist" rows={6} className="rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-slate-300" placeholder="number | name | finish | qty | max_price&#10;003 | Venusaur ex | holo | 1 | 30&#10;006 | Charizard ex | holo | 1 | 55"></textarea>
                 </label>
                 <div className="grid md:grid-cols-2 gap-4 items-start">
@@ -206,7 +205,7 @@ Want-list (number | name | finish | qty | max_price)
                     </div>
                     <div className="flex items-center gap-2">
                       <input id="booster" name="booster_optin" type="checkbox" className="h-4 w-4" />
-                      <label htmlFor="booster" className="text-sm">Offer a booster add‑on</label>
+                      <label htmlFor="booster" className="text-sm">Offer a booster add-on</label>
                     </div>
                   </label>
                 </div>
@@ -238,7 +237,7 @@ Want-list (number | name | finish | qty | max_price)
             </div>
             <div className="rounded-2xl border border-slate-200 p-4 bg-white">
               <div className="font-semibold">Where do you ship?</div>
-              <div className="text-sm text-slate-600 mt-1">Switzerland and EU to start. Tracked shipping recommended for higher‑value orders.</div>
+              <div className="text-sm text-slate-600 mt-1">Switzerland and EU to start. Tracked shipping recommended for higher-value orders.</div>
             </div>
           </div>
         </section>
